@@ -1,0 +1,344 @@
+Here's my scratch pad:
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy
+>>> >>> roster = [["jeremy", "theo"],["molly", "mila"
+  File "<stdin>", line 1
+    roster = [["jeremy", y", "theo"],["molly", "mila"
+                             ^
+SyntaxError: invalid syntax
+>>> ]
+  File "<stdin>", line 1
+    ]
+    ^
+SyntaxError: invalid syntax
+>>> ]]
+  File "<stdin>", line 1
+    ]]
+    ^
+SyntaxError: invalid syntax
+>>> ]
+  File "<stdin>", line 1
+    ]
+    ^
+SyntaxError: invalid syntax
+>>> ]
+  File "<stdin>", line 1
+    ]
+    ^
+SyntaxError: invalid syntax
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> roster = [["jeremy", "theo"],["molly", "mila"]]
+>>> arr = numpy.array(roster)
+>>> arr
+array([['jeremy', 'theo'],
+       ['molly', 'mila']], 
+      dtype='|S6')
+>>> print type(arr)
+<type 'numpy.ndarray'>
+>>> print type(roster)
+<type 'list'>
+>>> print arr.shape
+(2, 2)
+>>> print arr.rank
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'rank'
+>>> print arr[0]
+['jeremy' 'theo']
+>>> print arr[0][1]
+theo
+>>> print arr[0,1]
+theo
+>>> print arr[0,0]
+jeremy
+>>> print arr[1,1]
+mila
+>>> zeros = np.zeros((5,5))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'np' is not defined
+>>> zeros = numpy.zeros((5,5))
+>>> zeros
+array([[ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.]])
+>>> print zeros
+[[ 0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.]]
+>>> matrix = numpy.full((2,2), "hello")
+>>> matrix
+array([['hello', 'hello'],
+       ['hello', 'hello']], 
+      dtype='|S5')
+>>> ey = numpy.eye(5)
+>>> ey
+array([[ 1.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.],
+       [ 0.,  0.,  1.,  0.,  0.],
+       [ 0.,  0.,  0.,  1.,  0.],
+       [ 0.,  0.,  0.,  0.,  1.]])
+>>> e = numpy.random((1,1))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'module' object is not callable
+>>> e = numpy.random.random((1,1))
+>>> e
+array([[ 0.29552681]])
+>>> arr
+array([['jeremy', 'theo'],
+       ['molly', 'mila']], 
+      dtype='|S6')
+>>> boys = arr[1, :]
+>>> boys
+array(['molly', 'mila'], 
+      dtype='|S6')
+>>> boys = arr[0, 1:]
+>>> boys
+array(['theo'], 
+      dtype='|S6')
+>>> boys = arr[1:]
+>>> boys
+array([['molly', 'mila']], 
+      dtype='|S6')
+>>> kids = arr[(0,1), 1:]
+>>> kids
+array([['theo'],
+       ['mila']], 
+      dtype='|S6')
+>>> kids = arr[0:1, 1:]
+>>> kids
+array([['theo']], 
+      dtype='|S6')
+>>> kids = arr[0:2, 1:]
+>>> kids
+array([['theo'],
+       ['mila']], 
+      dtype='|S6')
+>>> kids = arr[1, 1:]
+>>> kids
+array(['mila'], 
+      dtype='|S6')
+>>> kids = arr[(0,1), 1:]
+>>> kids
+array([['theo'],
+       ['mila']], 
+      dtype='|S6')
+>>> kids.shape
+(2, 1)
+>>> kids = arr[:, 1:]
+>>> kids
+array([['theo'],
+       ['mila']], 
+      dtype='|S6')
+>>> kids = arr[:, 1]
+>>> kids
+array(['theo', 'mila'], 
+      dtype='|S6')
+>>> kids.shape
+(2,)
+>>> kids = arr[:, 1:]
+>>> kids.shape
+(2, 1)
+>>> import numpy as np
+>>> np
+<module 'numpy' from '/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/__init__.pyc'>
+>>> arr
+array([['jeremy', 'theo'],
+       ['molly', 'mila']], 
+      dtype='|S6')
+>>> kids = arr[[0,1], [1]]
+>>> kids
+array(['theo', 'mila'], 
+      dtype='|S6')
+>>> kids = arr[np.arange(2), [1]]
+>>> kids
+array(['theo', 'mila'], 
+      dtype='|S6')
+>>> print kids.reverse
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'reverse'
+>>> print kids.reverse()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'reverse'
+>>> kids
+array(['theo', 'mila'], 
+      dtype='|S6')
+>>> kids.reverse
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'reverse'
+>>> kids.reverse()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'reverse'
+>>> kids_ids = (arr > 0)
+>>> kids_ids
+True
+>>> kids_ids = (arr > 1)
+>>> kids_ids
+True
+>>> print kids_ids
+True
+>>> kids_ids = (arr == "theo" or arr == "mila")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+>>> kids_ids = (arr.any("theo") or arr.any("mila"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 38, in _any
+    return umr_any(a, axis, dtype, out, keepdims)
+TypeError: cannot perform reduce with flexible type
+>>> kids_ids = (arr == 'theo')
+>>> kids_ids
+array([[False,  True],
+       [False, False]], dtype=bool)
+>>> kids_ids = ((arr == 'theo') or (arr == 'mila'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+>>> kids_ids = (arr.any((arr == 'theo'), (arr == 'mila'))
+... )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 38, in _any
+    return umr_any(a, axis, dtype, out, keepdims)
+TypeError: data type not understood
+>>> )
+  File "<stdin>", line 1
+    )
+    ^
+SyntaxError: invalid syntax
+>>> 
+>>> kids_ids = (arr.any("theo", "mila"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 38, in _any
+    return umr_any(a, axis, dtype, out, keepdims)
+TypeError: data type "mila" not understood
+>>> kids_ids = arr.any("theo", "mila")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 38, in _any
+    return umr_any(a, axis, dtype, out, keepdims)
+TypeError: data type "mila" not understood
+>>> kids_idx = (arr == "theo")
+>>> kids_ids
+array([[False,  True],
+       [False, False]], dtype=bool)
+>>> kids_idx
+array([[False,  True],
+       [False, False]], dtype=bool)
+>>> kids_ids = ((arr == "theo") or (arr == "mila"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+>>> kids_ids = ("theo", "mila")
+>>> kids_ids
+('theo', 'mila')
+>>> kids_ids = ([theo, mila] in arr)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'theo' is not defined
+>>> kids_ids = (["theo", "mila"] in arr)
+>>> kids_ids
+True
+>>> kids_ids = (arr.length = 4)
+  File "<stdin>", line 1
+    kids_ids = (arr.length = 4)
+                           ^
+SyntaxError: invalid syntax
+>>> kids_ids = (arr.length == 4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'length'
+>>> kids_ids = (arr.len == 4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'len'
+>>> kids_ids = (arr == 'theo')
+>>> kids_ids
+array([[False,  True],
+       [False, False]], dtype=bool)
+>>> print arr[arr == 'theo']
+['theo']
+>>> print arr[(arr == 'theo')]
+['theo']
+>>> print arr[(arr == 'theo') or (arr == "mila")]]
+  File "<stdin>", line 1
+    print arr[(arr == 'theo') or (arr == "mila")]]
+                                                 ^
+SyntaxError: invalid syntax
+>>> print arr[(arr == 'theo') or (arr == "mila")]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+>>> print arr[np.any(arr, "theo")]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py", line 1950, in any
+    return arr.any(axis=axis, out=out, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 38, in _any
+    return umr_any(a, axis, dtype, out, keepdims)
+TypeError: cannot perform reduce with flexible type
+>>> print arr[arr.any("theo")]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 38, in _any
+    return umr_any(a, axis, dtype, out, keepdims)
+TypeError: cannot perform reduce with flexible type
+>>> print arr[arr == 'theo']
+['theo']
+>>> kids_idx = (arr.len() == 4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'len'
+>>> kids_idx = (arr.len() == 4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'len'
+>>> 
+>>> 
+>>> print arr.T()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'numpy.ndarray' object is not callable
+>>> print arr.T
+[['jeremy' 'molly']
+ ['theo' 'mila']]
+>>> x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+>>> x.shape
+(4, 3)
+>>> x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11]])
+>>> x.shape
+(4,)
+>>> x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+>>> x.shape
+(4, 3)
+>>> 
+>>> 
+>>> clone = np.tile(arr, (2,))
+>>> clone
+array([['jeremy', 'theo', 'jeremy', 'theo'],
+       ['molly', 'mila', 'molly', 'mila']], 
+      dtype='|S6')
+>>> clone = np.tile(arr, (2,1))
+>>> clone
+array([['jeremy', 'theo'],
+       ['molly', 'mila'],
+       ['jeremy', 'theo'],
+       ['molly', 'mila']], 
+      dtype='|S6')
+>>> 
