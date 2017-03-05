@@ -8,6 +8,7 @@ import sklearn.svm as svm
 from sklearn import tree
 from sklearn import ensemble
 import sklearn.linear_model as lm
+from sklearn.model_selection import GridSearchCV
 
 # def r(data, colx, coly):
 #     meanx = data.describe()[colx]["mean"]
@@ -48,7 +49,10 @@ kfold = KFold(n_splits=10, random_state=7)
 # omp = lm.OrthogonalMatchingPursuit()
 # br = lm.BayesianRidge()
 kn = KNeighborsClassifier()
-svc = svm.SVC()
+svc = svm.SVC(C=1, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=1, gamma='auto', kernel='linear',
+  max_iter=3, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
 lsvc = svm.LinearSVC()
 dt = tree.DecisionTreeClassifier()
 rf = ensemble.RandomForestClassifier()
@@ -58,6 +62,14 @@ models = [kn, svc, lsvc, dt, rf, gb, bag]
 for model in models:
     result = cross_val_score(model, X, Y, cv=kfold)
     print('%s: Score: %.3f') % (model.__class__, result.mean())
+
+
+#parameter tuning
+param_grid = dict(kernel=["linear", "poly", "rbf", "sigmoid"], degree=[1,2,3,4], max_iter=[1,2,3], probability=[True, False], shrinking=[True, False] )
+grid = GridSearchCV(estimator=svc, param_grid=param_grid)
+grid.fit(X, Y)
+print(grid.best_score_)
+print(grid.best_estimator_)
 
 
 
