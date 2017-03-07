@@ -9,6 +9,7 @@ from sklearn import tree
 from sklearn import ensemble
 import sklearn.linear_model as lm
 from sklearn.model_selection import GridSearchCV
+import pickle
 
 # def r(data, colx, coly):
 #     meanx = data.describe()[colx]["mean"]
@@ -70,6 +71,9 @@ grid = GridSearchCV(estimator=svc, param_grid=param_grid)
 grid.fit(X, Y)
 print(grid.best_score_)
 print(grid.best_estimator_)
+model = grid.best_estimator_
+filename = "iris-hello-world.sav"
+pickle.dump(model, open(filename, 'wb'))
 
 
 
