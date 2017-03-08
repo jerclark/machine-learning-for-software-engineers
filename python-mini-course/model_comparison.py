@@ -18,7 +18,7 @@ models.append(('LDA', LinearDiscriminantAnalysis()))
 # evaluate each model in turn
 results = []
 names = []
-scoring = 'accuracy'
+scoring = 'r2'
 for name, model in models:
 	kfold = KFold(n_splits=10, random_state=7)
 	cv_results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
