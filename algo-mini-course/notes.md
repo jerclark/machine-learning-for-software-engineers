@@ -24,3 +24,19 @@ Nonparametric: Make no assumptions about the form of the mapping function. As su
 Examples: SVC, neural networks, decision trees.
 
 
+## Lesson 4 -  Bias/Variance tradeoff
+
+Bias: Assumptions made by algo to simplify. Can be easier to train and accurate, but less flexible.
+High-bias - Linear algos
+Low-bias - decision trees
+
+Variance: Amount target function estimate will change if different training data used.
+High-Var - knearest neighbors
+Low-Var - Linear Discriminant Analysis
+
+Goal to get low in both. Parameterization of algos does this.
+
+Increase bias, decrease var
+Increase var, decrease bias
+
+
