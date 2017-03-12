@@ -59,3 +59,29 @@ y = B0 + B1 * x
 We will predict y given the input x and the goal of the linear regression learning algorithm is to find the values for the coefficients B0 and B1.
 
 Rule of thumb: Remove attributes that are similar (correlated) and remove noise from the data.
+
+My Take:
+Linear regression aims to devise a formula for a line, where the proper y-intercept and slope coefficient are
+determined from the given data. One simple method is the 'least squares' method, where the square of the distance
+of each point from the line is added up. (the sum of the squares of the vertical deviations). Smallest number wins. This can cause issues when there are outliers. Other types
+of linear regressions are ridge regression and lasso regression. See here for good details: http://www.stat.yale.edu/Courses/1997-98/101/linreg.htm
+
+In ML, use the Y value of the line to predict for a given X.
+
+
+## Lesson 6 - Logistic Regression
+
+Similar to Linear regression - trying to find the coefficients to weight each input variable. However, the
+target function is non-linear (the logistic function).
+
+The logistic function will transform any output into a number between 0 and 1. It is used for binary classification
+(two target classes). It works with binary classification by applying a rule to "snap" output values to either 0 or 1.
+Like linear regression, removing highly correlated variables as well as variables that are unrelated to the output variable
+improves the ability to estimate the target function.
+
+Essentially, while the goal is to predict whether a sample is a 'case' or 'not a case', the output of the function
+is a fraction representing the probablity that a sample is a 'case'.
+
+https://en.wikipedia.org/wiki/Logistic_regression
+
+
