@@ -24,19 +24,38 @@ Nonparametric: Make no assumptions about the form of the mapping function. As su
 Examples: SVC, neural networks, decision trees.
 
 
-## Lesson 4 -  Bias/Variance tradeoff
+## Lesson 4 - Bias, variance and the trade off
 
-Bias: Assumptions made by algo to simplify. Can be easier to train and accurate, but less flexible.
-High-bias - Linear algos
-Low-bias - decision trees
-
-Variance: Amount target function estimate will change if different training data used.
-High-Var - knearest neighbors
-Low-Var - Linear Discriminant Analysis
-
-Goal to get low in both. Parameterization of algos does this.
-
-Increase bias, decrease var
-Increase var, decrease bias
+Bias: Assumptions made by the model to make the training easier
+Parametric functions generally have higher bias. Easier to train, but are less flexible. Can't perform well
+on complex problems where the data won't subscribe to the assumptions.
+High-bias: Linear Regression
+Low-bias: Decision Trees
 
 
+Variance: Amount estimate of the target function will change if different training data used.
+The target function is the thing that's 'estimated' from the machine learning algorithm.
+High-variance: KNearestNeighbors
+Low-Variance: LinearDiscriminantAnalysis
+
+
+Ideal is LOW bias and LOW variance. Parameterization of algorithms is a battle to balance bias and variance.
+
+Increasing bias, decreases variance
+Increasing variance, decreases bias
+
+
+## Lesson 5 - Linear Regression
+
+Linear Regression creates an equation describing a line that best 'fits' the relationship between inputs (X) and
+outputs (Y) by finding weights for the input variables (Coefficients).
+
+From the text:
+
+For example:
+
+y = B0 + B1 * x
+
+We will predict y given the input x and the goal of the linear regression learning algorithm is to find the values for the coefficients B0 and B1.
+
+Rule of thumb: Remove attributes that are similar (correlated) and remove noise from the data.
