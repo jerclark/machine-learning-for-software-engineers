@@ -85,3 +85,8 @@ is a fraction representing the probablity that a sample is a 'case'.
 https://en.wikipedia.org/wiki/Logistic_regression
 
 
+## LESSON 8 - DECISION TEREES (CART)
+Classification and regression trees.
+
+Binary trees. each node is input variable (X) and the branch is based on a calculated split point. each leaf node is a prediction (Y). each x assumed to be numeric. for each inservation run the independent variables through the tree and see where end up.
+split ppints are greedy,each one is optimized for the least cost to execute. the leaf nodes meet some "stopping criteria(like a min numbrer of samples in that class for the given path)
