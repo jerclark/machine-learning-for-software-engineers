@@ -85,8 +85,47 @@ is a fraction representing the probablity that a sample is a 'case'.
 https://en.wikipedia.org/wiki/Logistic_regression
 
 
-## LESSON 8 - DECISION TEREES (CART)
-Classification and regression trees.
+## Lesson 7  - Linear Discriminant Analysis
 
-Binary trees. each node is input variable (X) and the branch is based on a calculated split point. each leaf node is a prediction (Y). each x assumed to be numeric. for each inservation run the independent variables through the tree and see where end up.
-split ppints are greedy,each one is optimized for the least cost to execute. the leaf nodes meet some "stopping criteria(like a min numbrer of samples in that class for the given path)
+Similar to Logistic regression, although the target prediction is for multiple classes. Can also be used for
+binary predictions, so it's worth a shot against logistic regression. Like the other regression algorithms, it
+helps to remove highly correlated independent variables.
+
+it calculates the mean and variance for each dependent variable, against each possible class.
+
+Also, all of the independent variables must exhibit a normal (gaussian) distribution and have the same variance (mean of 0 standard deviation of 1)
+This can be done by preparing the data beforehand.
+
+Deeper dive here: http://machinelearningmastery.com/linear-discriminant-analysis-for-machine-learning/
+
+
+## Lesson 8 - Classification and Regression Trees
+
+Decision Trees: A binary tree. Each node is an input/independent variable (x), with a split point on that variable
+(assuming the value is numeric). The leaf nodes are predictions (y), made if the tree walk leads to that leaf (following
+the splits).
+
+Trees are fast to learn and fast to make predicitons, but they have high variance.
+
+
+## Lesson 9 - Naive Bayes
+
+Two types of probabilities in the model:
+    the probability of each class
+    The conditional probability of each class given a particular x value
+
+Then the model is used to apply Bayes theroem to new samples.
+
+Bayes Theorem - conditional probability:
+P(A|B) = ( P(B|A)P(A) ) / P(B)
+(Drug testing example here is a good one: https://en.wikipedia.org/wiki/Bayes%27_theorem)
+
+When the independent variables are 'real-valued' its assumed they have a normal distribution (gaussian/bell)
+
+It's called "naive" because it assumes that the x-values are independent (not correlated). This is a strong
+assumption, and unlikely for real data - but this can be a cheap and effective algorithm.
+
+
+## Lesson 10 - K Nearest Neighbors
+
+
