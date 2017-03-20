@@ -128,4 +128,35 @@ assumption, and unlikely for real data - but this can be a cheap and effective a
 
 ## Lesson 10 - K Nearest Neighbors
 
+Model is the entire data set.
+
+New samples are compared to the most similar existing samples, and the
+output variables are summarized to make a prediction.
+For regression problems, perhaps the mean of the 'nearest' output variables and for classification
+perhaps the 'mode' will be used.
+
+The tricky part is to efficiently determine the 'nearest' neighbors...how is that
+similarity defined? If all attributes (features/independent variables) are the same
+scale, the euclidian distance (the simple difference between the exisiting sample and the new sample).
+
+Can require lots of space, but only makes a computation (a learn) when necessary.
+
+Closeness can 'break down' in high dimensions. When possible only use the attributes that are most relevant.
+
+## Lesson 11 - Learning Vector Quantization
+
+An artificial neural network algo. Unlike KNN which uses the entire training
+data set (which you have to 'hold on' to), LVQ allows for choosing the
+\# of training data samples to keep and it learns wheat they should look like.
+
+The representation is a collection of 'codebook' vectors (what is that?) These are
+summations of the dataset, learned over a set of iterations. Once learned, the codebook
+vectors are used to make predictions like KNN. But i think the idea here is that you find
+the closest 'codebook vector' and just use the target variable as the prediction.
+(is this the same as CNN as described here?: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm)
+
+Here's the wiki for LVQ: https://en.wikipedia.org/wiki/Learning_vector_quantization
+They refer to "prototypes", which I think are the same as the 'codebook vectors' mentioned
+in the python article. 
+
 
