@@ -159,4 +159,24 @@ Here's the wiki for LVQ: https://en.wikipedia.org/wiki/Learning_vector_quantizat
 They refer to "prototypes", which I think are the same as the 'codebook vectors' mentioned
 in the python article. 
 
+##Lesson 12 - Support Vector Machines
+
+A 'hyperplane' is used to separate samples into classes. At simplest, the hyperplane
+is a line in 2 dimensions, but can be in multiple dimensions as a complex curved plane. 
+
+The distance between the plane and the nearest points is called the 'margin'. The optimal 
+plane is the one that has the largest margin (that is, it best separates the classes.) The closest
+datapoints are the only relevant points to define the hype plane - so they are called the "supports".
+
+From: http://scikit-learn.org/stable/modules/svm.html
+
+Advantages
+* Effective in high dimensions
+* Only use a subset of points in the decision function, so good on memory
+* Versatile: Can use custom 'kernel' functions
+* Can still be effective when features outnumber samples
+
+Disadvantages:
+* Can yeild poor results in features greatly outweight samples
+* They don't provide probability estimates - must use an expensive five-fold cross validation
 
