@@ -180,3 +180,19 @@ Disadvantages:
 * Can yeild poor results in features greatly outweight samples
 * They don't provide probability estimates - must use an expensive five-fold cross validation
 
+## Lesson 13 - Bagging and Random Forest
+
+Bagging = Bootstrap Aggregation
+
+Models are created for subset samples of the data set. Then, when a prediction needs to be made each model provides a prediction and the results are 'averaged' to get a better estimate.
+
+One method introduces randomness when defining decision tree split points (making them 'suboptimal'), but somehow the combination of the various randomized models yields a better result.
+
+Bagging should improve already good results from a decision tree.
+
+## Lesson 14 - Boosting/AdaBoost
+
+Boosting: Trying to make a strong classifier from a number of weak classifiers.
+
+Many models are created, where each subsequent model tries to correct the errors from the previous model. With each model, higher weights are given to 'hard to predict' data, so that the subsequent models will give them more attention. 
+
