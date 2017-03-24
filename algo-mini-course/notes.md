@@ -159,7 +159,7 @@ Here's the wiki for LVQ: https://en.wikipedia.org/wiki/Learning_vector_quantizat
 They refer to "prototypes", which I think are the same as the 'codebook vectors' mentioned
 in the python article. 
 
-##Lesson 12 - Support Vector Machines
+## Lesson 12 - Support Vector Machines
 
 A 'hyperplane' is used to separate samples into classes. At simplest, the hyperplane
 is a line in 2 dimensions, but can be in multiple dimensions as a complex curved plane. 
