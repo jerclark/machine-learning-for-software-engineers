@@ -1,0 +1,544 @@
+octave:61> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:62> 
+octave:62> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:63> size(A)
+ans =
+
+   3   2
+
+octave:64> sz = size(A)
+sz =
+
+   3   2
+
+octave:65> sz
+sz =
+
+   3   2
+
+octave:66> size(sz)
+ans =
+
+   1   2
+
+octave:67> size(A,1)
+ans =  3
+octave:68> size(A,2)
+ans =  2
+octave:69> v = [1 2 3 4]
+v =
+
+   1   2   3   4
+
+octave:70> length(v)
+ans =  4
+octave:71> % v is longest dimension
+octave:71> % length is longest dimension
+octave:71> % size is the dimension
+octave:71> pwd
+ans = /Users/jerclark
+octave:72> ls
+ATM			TestDrive-Nodejs	login.html		rfce215a.txt
+Applications		VirtualBox VMs		login.js		santoku
+CSCIE_HW		WebstormProjects	login_for_vnue.html	servconn.c
+Desktop			anaconda2		login_min.js		setuptools-33.1.1.zip
+Documents		brultech_data		login_vnue.html		signin.html
+Downloads		builtin.c		nav.js			signin.jade
+Dropbox			code			netpong.pdf		signin.js
+Library			css_for_vnue_login	npm-debug.log		socklib.c
+Makefile		dumps			nponglib.h		splitline.c
+Movies			face-to-face-icon_2.png	npsentry.c		sttyl.c
+Music			final_samples		pball.c			sttyl.h
+PaladinTemp		freezing-sunset-9218	pcourt 2.h		test.m4a
+Pictures		google-cloud-sdk	pcourt.h		unix pong
+Plan			greptest		pgadmin.log		untitled folder
+Plan_TEMPLATE		hw4_frank		picture.png		venu_logo_blue.png
+Public			jeremy-clark-homework	pong			vnue_files.csv
+RCM			litquincy		pong.zip		wmc_app.pdf
+Roygbiv.screenflow	lively_files		ponglib.h		work_notes
+Sites			lively_files.csv	preferee.c
+octave:73> cd code
+octave:74> ls
+Docker Notes				foh-logo.zip
+IsrcService				freezing-sunset-9218
+LAM-Apple				google-api-php-client
+LAM-iOS					hack2016
+LAM-iOS-new				hack2016_ngbootstrap
+LAM-iOS-new-2				helloworld
+LAM-iOS-new-vnue			heroku_fs9218
+Lively					jcdevprofile.p12
+Lively_To_Vnue				jcprofile.developerprofile
+LivelyiOS				jeremy-clark-homework
+Mac - Lively Beta			key.p12
+MadBallots				lego-car
+MadBallots_iPhone			litquincy
+MadBallots_iPhone_Github		litquincy-api
+Playgrounds				litquincy_basic
+Test					lvmq-iOS
+TestSDK					machine-learning-for-software-engineers
+TotoClient-iOS				machine_learning
+coffee_script				matrix_master
+cozmo					node-js-anatomy
+cozmo_sdk_examples_0.10.0		node-js-getting-started
+cozmo_sdk_examples_0.10.0.tar		php5.4.30
+dwa					simple-pong
+foh-logo				tag_game
+foh-logo 2				untitled folder
+foh-logo.png				vnue_presence
+octave:75> cd ~/code
+octave:76> ls
+Docker Notes				foh-logo.zip
+IsrcService				freezing-sunset-9218
+LAM-Apple				google-api-php-client
+LAM-iOS					hack2016
+LAM-iOS-new				hack2016_ngbootstrap
+LAM-iOS-new-2				helloworld
+LAM-iOS-new-vnue			heroku_fs9218
+Lively					jcdevprofile.p12
+Lively_To_Vnue				jcprofile.developerprofile
+LivelyiOS				jeremy-clark-homework
+Mac - Lively Beta			key.p12
+MadBallots				lego-car
+MadBallots_iPhone			litquincy
+MadBallots_iPhone_Github		litquincy-api
+Playgrounds				litquincy_basic
+Test					lvmq-iOS
+TestSDK					machine-learning-for-software-engineers
+TotoClient-iOS				machine_learning
+coffee_script				matrix_master
+cozmo					node-js-anatomy
+cozmo_sdk_examples_0.10.0		node-js-getting-started
+cozmo_sdk_examples_0.10.0.tar		php5.4.30
+dwa					simple-pong
+foh-logo				tag_game
+foh-logo 2				untitled folder
+foh-logo.png				vnue_presence
+octave:77> cd machine_learning/
+octave:78> ls
+workbench
+octave:79> cd workbench/
+octave:80> ls
+algo_evaluation_metrics.py	mpg_linear_regression_r2.py	spot-checking
+octave:81> cd ..
+octave:82> ls
+workbench
+octave:83> cd..
+parse error:
+
+  syntax error
+
+>>> cd..
+       ^
+
+octave:83> ls
+workbench
+octave:84> cd ..
+octave:85> ls
+Docker Notes				foh-logo.zip
+IsrcService				freezing-sunset-9218
+LAM-Apple				google-api-php-client
+LAM-iOS					hack2016
+LAM-iOS-new				hack2016_ngbootstrap
+LAM-iOS-new-2				helloworld
+LAM-iOS-new-vnue			heroku_fs9218
+Lively					jcdevprofile.p12
+Lively_To_Vnue				jcprofile.developerprofile
+LivelyiOS				jeremy-clark-homework
+Mac - Lively Beta			key.p12
+MadBallots				lego-car
+MadBallots_iPhone			litquincy
+MadBallots_iPhone_Github		litquincy-api
+Playgrounds				litquincy_basic
+Test					lvmq-iOS
+TestSDK					machine-learning-for-software-engineers
+TotoClient-iOS				machine_learning
+coffee_script				matrix_master
+cozmo					node-js-anatomy
+cozmo_sdk_examples_0.10.0		node-js-getting-started
+cozmo_sdk_examples_0.10.0.tar		php5.4.30
+dwa					simple-pong
+foh-logo				tag_game
+foh-logo 2				untitled folder
+foh-logo.png				vnue_presence
+octave:86> cd machine-learning-
+.DS_Store                                foh-logo.png
+.com.apple.timemachine.supported         foh-logo.zip
+.vagrant/                                freezing-sunset-9218/
+Docker Notes                             google-api-php-client/
+IsrcService/                             hack2016/
+LAM-Apple/                               hack2016_ngbootstrap/
+LAM-iOS/                                 helloworld/
+LAM-iOS-new/                             heroku_fs9218/
+LAM-iOS-new-2/                           jcdevprofile.p12
+LAM-iOS-new-vnue/                        jcprofile.developerprofile
+Lively/                                  jeremy-clark-homework/
+Lively_To_Vnue/                          key.p12
+LivelyiOS/                               lego-car/
+Mac - Lively Beta/                       litquincy/
+MadBallots/                              litquincy-api/
+MadBallots_iPhone/                       litquincy_basic/
+MadBallots_iPhone_Github/                lvmq-iOS/
+Playgrounds/                             machine-learning-for-software-engineers/
+Test/                                    machine_learning/
+TestSDK/                                 matrix_master/
+TotoClient-iOS/                          node-js-anatomy/
+coffee_script/                           node-js-getting-started/
+cozmo/                                   php5.4.30/
+cozmo_sdk_examples_0.10.0/               simple-pong/
+cozmo_sdk_examples_0.10.0.tar            tag_game/
+dwa/                                     untitled folder/
+foh-logo                                 vnue_presence/
+foh-logo 2/                              
+octave:86> cd machine-learning-for-software
+error: machine-learning-for-software: No such file or directory
+octave:86> ls
+Docker Notes				foh-logo.zip
+IsrcService				freezing-sunset-9218
+LAM-Apple				google-api-php-client
+LAM-iOS					hack2016
+LAM-iOS-new				hack2016_ngbootstrap
+LAM-iOS-new-2				helloworld
+LAM-iOS-new-vnue			heroku_fs9218
+Lively					jcdevprofile.p12
+Lively_To_Vnue				jcprofile.developerprofile
+LivelyiOS				jeremy-clark-homework
+Mac - Lively Beta			key.p12
+MadBallots				lego-car
+MadBallots_iPhone			litquincy
+MadBallots_iPhone_Github		litquincy-api
+Playgrounds				litquincy_basic
+Test					lvmq-iOS
+TestSDK					machine-learning-for-software-engineers
+TotoClient-iOS				machine_learning
+coffee_script				matrix_master
+cozmo					node-js-anatomy
+cozmo_sdk_examples_0.10.0		node-js-getting-started
+cozmo_sdk_examples_0.10.0.tar		php5.4.30
+dwa					simple-pong
+foh-logo				tag_game
+foh-logo 2				untitled folder
+foh-logo.png				vnue_presence
+octave:87> cd machine-learning-for-software-engineers
+octave:88> ls
+LICENSE.txt		README.md		csv-load-exercises.txt	python-mini-course
+README-pt-BR.md		algo-mini-course	machine-learning-is-fun	python_work_numpy.txt
+README-zh-CN.md		coursera		podcast			python_work_pandas.txt
+octave:89> cd algo-mini-course/
+octave:90> ls
+notes.md	notes.md.orig
+octave:91> cd ..
+octave:92> ls
+LICENSE.txt		README.md		csv-load-exercises.txt	python-mini-course
+README-pt-BR.md		algo-mini-course	machine-learning-is-fun	python_work_numpy.txt
+README-zh-CN.md		coursera		podcast			python_work_pandas.txt
+octave:93> cd python
+error: python: No such file or directory
+octave:93> cd python-mini-course
+octave:94> ls
+algo_evaluation_metrics.py	iris-hello-world.sav		run_model.py
+auto-displacment-model.sav	model_comparison.py		save_model.py
+data				mpg_linear_regression_r2.py	spot-checking
+hello-world-iris.py		parameter_tuning.py
+octave:95> cd data/
+octave:96> ls
+iris.data
+octave:97> open .
+warning: the 'open' function is not yet implemented in Octave
+
+Please read `http://www.octave.org/missing.html' to learn how you can
+contribute missing functionality.
+
+
+error: 'open' undefined near line 1 column 1
+octave:97> l
+error: 'l' undefined near line 1 column 1
+octave:97> ls
+iris.data
+octave:98> cd ../../
+octave:99> ls
+LICENSE.txt		README.md		csv-load-exercises.txt	python-mini-course
+README-pt-BR.md		algo-mini-course	machine-learning-is-fun	python_work_numpy.txt
+README-zh-CN.md		coursera		podcast			python_work_pandas.txt
+octave:100> cd coursera/
+octave:101> ls
+week1	week2
+octave:102> cd week
+error: week: No such file or directory
+octave:102> cd week2/
+octave:103> ls
+Octave Basics	iris_x.data	iris_y.data
+octave:104> load iris_x.data
+octave:105> load iris_y.data
+error: load: failed to read matrix from file 'iris_y.data'
+octave:105> ls
+Octave Basics	iris_x.data	iris_y.data
+octave:106> load iris_y.data
+error: load: failed to read matrix from file 'iris_y.data'
+octave:106> % load() will load data.
+octave:106> % but I think iris_y won't load because it's a string (classification target)
+octave:106> who
+Variables in the current scope:
+
+A       C       a       ans     b       i       iris_x  r       sz      v       w
+
+octave:107> % who prints the current variables
+octave:107> size(iris_x)
+ans =
+
+   150     4
+
+octave:108> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x2                         48  double
+        C           2x3                         48  double
+        a           1x1                          8  double
+        ans         1x2                         16  double
+        b           1x1                          8  double
+        i          10x10                        80  double
+        iris_x    150x4                       4800  double
+        r           1x500                     4000  double
+        sz          1x2                         16  double
+        v           1x4                         32  double
+        w           1x1000                    8000  double
+
+Total is 2222 elements using 17056 bytes
+
+octave:109> % Use whos to get a list of variables with details
+octave:109> % clear will clear a variable
+octave:109> v = iris_x(1:10)
+v =
+
+   5.1000   4.9000   4.7000   4.6000   5.0000   5.4000   4.6000   5.0000   4.4000   4.9000
+
+octave:110> size(v)
+ans =
+
+    1   10
+
+octave:111> save somefeatures.dat v
+octave:112> load somefeatures.dat
+octave:113> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x2                         48  double
+        C           2x3                         48  double
+        a           1x1                          8  double
+        ans         1x2                         16  double
+        b           1x1                          8  double
+        i          10x10                        80  double
+        iris_x    150x4                       4800  double
+        r           1x500                     4000  double
+        sz          1x2                         16  double
+        v           1x10                        80  double
+        w           1x1000                    8000  double
+
+Total is 2228 elements using 17104 bytes
+
+octave:114> who
+Variables in the current scope:
+
+A       C       a       ans     b       i       iris_x  r       sz      v       w
+
+octave:115> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x2                         48  double
+        C           2x3                         48  double
+        a           1x1                          8  double
+        ans         1x2                         16  double
+        b           1x1                          8  double
+        i          10x10                        80  double
+        iris_x    150x4                       4800  double
+        r           1x500                     4000  double
+        sz          1x2                         16  double
+        v           1x10                        80  double
+        w           1x1000                    8000  double
+
+Total is 2228 elements using 17104 bytes
+
+octave:116> save somedata.txt v -ascii
+octave:117> save hello.mat v
+octave:118> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x2                         48  double
+        C           2x3                         48  double
+        a           1x1                          8  double
+        ans         1x2                         16  double
+        b           1x1                          8  double
+        i          10x10                        80  double
+        iris_x    150x4                       4800  double
+        r           1x500                     4000  double
+        sz          1x2                         16  double
+        v           1x10                        80  double
+        w           1x1000                    8000  double
+
+Total is 2228 elements using 17104 bytes
+
+octave:119> clear
+octave:120> load hello.mat
+octave:121> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        v           1x10                        80  double
+
+Total is 10 elements using 80 bytes
+
+octave:122> load somedata.txt
+octave:123> whos
+Variables in the current scope:
+
+   Attr Name          Size                     Bytes  Class
+   ==== ====          ====                     =====  ===== 
+        somedata      1x10                        80  double
+        v             1x10                        80  double
+
+Total is 20 elements using 160 bytes
+
+octave:124> % loading a binary file will load the variable name that was saved. Loading a text file will use the file name as the variable name.
+octave:124> A = [1 2;3 4;5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:125> A(3,2)
+ans =  6
+octave:126> % Use positional indexing (row, column)
+octave:126> A(2:)
+parse error:
+
+  syntax error
+
+>>> A(2:)
+        ^
+
+octave:126> A(2,:)
+ans =
+
+   3   4
+
+octave:127> % Use a colon to get everything in that orientation (row or column)
+octave:127> A([1 3],:)
+ans =
+
+   1   2
+   5   6
+
+octave:128> % You can fetch multiple rows/columns with a wildcard.
+octave:128> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:129> A(,:2)
+parse error:
+
+  syntax error
+
+>>> A(,:2)
+      ^
+
+octave:129> A(:,2)
+ans =
+
+   2
+   4
+   6
+
+octave:130> A(:,2) = [7 8 9]
+A =
+
+   1   7
+   3   8
+   5   9
+
+octave:131> % You can assign using index notation
+octave:131> % Append another column vector
+octave:131> A = [A; [100; 101; 102]]
+error: vertical dimensions mismatch (3x2 vs 3x1)
+octave:131> A = [A [100; 101; 102]]
+A =
+
+     1     7   100
+     3     8   101
+     5     9   102
+
+octave:132> size(A)
+ans =
+
+   3   3
+
+octave:133> A(:)
+ans =
+
+     1
+     3
+     5
+     7
+     8
+     9
+   100
+   101
+   102
+
+octave:134> % Put all A into a column vector.
+octave:134> A = [1 2;3 4;5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:135> B = [11 12; 13 14; 15 16]
+B =
+
+   11   12
+   13   14
+   15   16
+
+octave:136> C = [ A B]
+C =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+octave:137> % Can join two matrices by putting the into another matrix
+octave:137> % If you use semi colons. It extends the rows rather than the columns.
+octave:137> C = [A;B]
+C =
+
+    1    2
+    3    4
+    5    6
+   11   12
+   13   14
+   15   16
+
