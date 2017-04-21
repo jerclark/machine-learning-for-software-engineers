@@ -1,0 +1,12 @@
+Week3 notes:
+
+Vectorization of gradient descent for logistic regression: 
+skip the for loop, and compute theta := theta - alpha(delta), where delta = 1/m[sum from 0 to n, h(x)^i - y^i * x^i]
+
+Optimizations:
+Other options beside gradient descent: Conjugate gradient, BFGS, L-BFGS
+Main Advatage: no need to pick alpha, faster
+Main disadvantage: More complex
+
+One vs. All - Multiclass classification
+Take each class, and turn it into a binary classification process. Run logisitic regression on each to get P(y=i|x;theta) (the probability that y=the target class), and take the MAX
