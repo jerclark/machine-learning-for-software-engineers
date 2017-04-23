@@ -16,8 +16,17 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
+    theta_tmp = zeros(length(theta), 1);
+    for j = 1:length(theta),
+        tmp_error = 0;
+        for i = 1:m,
+           tmp_error = tmp_error + (((theta' * X(i,:)') - y(i)) * X(i,j));
+        end;
+        theta_tmp(j) = theta(j) - alpha * (1/m) * tmp_error;
+    end;
 
 
+    theta = theta_tmp; 
 
 
 

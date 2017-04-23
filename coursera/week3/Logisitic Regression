@@ -1,0 +1,23 @@
+Cost Function:
+
+J(theta) = 1/m * ((sum 1 to m) * specific cost function). For Linear regression, the specific cost function is 1/2 the squared error.
+
+Fr Logistic Regression: Can't use square loss function, because
+the function is 'non-convex'. Not guaranteed to find global minimum.
+
+So - the cost function is:
+
+J(theta) = -y*log(h(x)) - (1-y)*log((1-y)h(x))
+
+This is the same as saying:
+-log(h(x)) when y = 1
+
+and
+
+-log(1-h(x)) when y = 0
+
+We're only interested in h(x) (i.e. y) values between 0 and 1.
+
+
+
+
