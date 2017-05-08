@@ -18,9 +18,11 @@ function [J grad] = nnCostFunction(nn_params, ...
 % for our 2 layer neural network
 Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
                  hidden_layer_size, (input_layer_size + 1));
+                 
 
 Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end), ...
                  num_labels, (hidden_layer_size + 1));
+                 
 
 % Setup some useful variables
 m = size(X, 1);
@@ -67,6 +69,7 @@ c = [1:num_labels];
 y_vals = (y == c);
 
 % Feedfoward, by predicting
+
 h1 = sigmoid([ones(m, 1) X] * Theta1');
 h2 = sigmoid([ones(m, 1) h1] * Theta2');
 
@@ -101,17 +104,31 @@ regterm = (lambda * (regterm1 + regterm2)) / (2*m);
 J = J + regterm;
 
 
+%Gradients
+for t = 1:m,
+  a_1 = X(t,:)';
+  a_1 = [ 1; a_1 ];
+  z_2 = Theta1 * a_1;
+  a_2 = sigmoid(z_2);
+  a_2 = [ 1; a_2 ];
+  z_3 = Theta2 * a_2;
+  a_3 = sigmoid(z_3);
+  d_3 = a_3 - y_vals(t,:)';
+  d_2 = (Theta2'*d_3)(2:end).*(sigmoidGradient(z_2));
+  Theta2_grad = Theta2_grad + (d_3*(a_2'));
+  Theta1_grad = Theta1_grad + (d_2*(a_1'));
+end;
 
 
+Theta1_grad = Theta1_grad ./ m;
+Theta1_reg = Theta1_grad(:,2:end);
+Theta1_reg = Theta1_reg + (((lambda/m).*Theta1(:,2:end)));
+Theta1_grad(:,2:end) = Theta1_reg;
 
-
-
-
-
-
-
-
-
+Theta2_grad = Theta2_grad ./ m;
+Theta2_reg = Theta2_grad(:,2:end);
+Theta2_reg = Theta2_reg + (((lambda/m).*Theta2(:,2:end)));
+Theta2_grad(:,2:end) = Theta2_reg;
 
 
 
