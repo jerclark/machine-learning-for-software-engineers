@@ -1,3 +1,4 @@
+
 %% Machine Learning Online Class
 %  Exercise 5 | Regularized Linear Regression and Bias-Variance
 %
@@ -35,12 +36,12 @@ load ('ex5data1.mat');
 m = size(X, 1);
 
 % Plot training data
-plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
-xlabel('Change in water level (x)');
-ylabel('Water flowing out of the dam (y)');
+%plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
+%xlabel('Change in water level (x)');
+%ylabel('Water flowing out of the dam (y)');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+%pause;
 
 %% =========== Part 2: Regularized Linear Regression Cost =============
 %  You should now implement the cost function for regularized linear 

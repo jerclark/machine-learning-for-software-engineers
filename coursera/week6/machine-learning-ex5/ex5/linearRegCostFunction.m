@@ -21,17 +21,19 @@ grad = zeros(size(theta));
 
 
 
+h = X * theta;
+vector = (h - y) .^ 2;
+regterm = (lambda * sumsq(theta(2:end,:))) / (2*m);
+J = ((sum(vector)) / (2*m)) + regterm;
 
 
-
-
-
-
+grad(1,:) = (((h-y)')*(X(:,1))) / m;
+gRest = (((h-y)')*(X(:,2:end)) ./ m);
+gradreg = ((lambda*theta(2:end))/m);
+grad(2:end,:) = gRest .+ gradreg';
 
 
 
 % =========================================================================
-
-grad = grad(:);
 
 end
